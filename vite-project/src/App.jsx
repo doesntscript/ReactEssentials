@@ -12,6 +12,7 @@ import stateImg from './assets/state-mgmt.png';
 
 import { useEffect, useState } from "react";
 
+import { CORE_CONCEPTS } from './data.js';
 
 
 
@@ -46,18 +47,29 @@ function Header() {
   )
 }
 
-function CoreConcept(props) {
+// function CoreConcept(props) {
+//   return (
+//     <>
+//     <li>
+//       <img src={props.image} alt={props.title} />
+//       <h3>{props.title}</h3>
+//       <p>{props.description}</p>
+//     </li>
+//     </>
+//   )
+// }
+
+function CoreConcept({image, title , description}) {
   return (
     <>
     <li>
-      <img src={props.img} alt={props.title} />
-      <h3>{props.title}</h3>
-      <p>{props.description}</p>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
     </li>
     </>
   )
 }
-
 
 function App() {
     return (
@@ -67,10 +79,12 @@ function App() {
           <section id='core-concepts'>
             <h2>Core Concepts</h2>
             <ul>
-              <CoreConcept img={componentsImg} title="Components" description="The core UI building block."  />
-              <CoreConcept img={configImg} title="Props" description="" />
-              <CoreConcept img={jsxImg} title="" description="" />
-              <CoreConcept img={stateImg} title="" description="" />
+              <CoreConcept image={CORE_CONCEPTS[0].image} title={CORE_CONCEPTS[0].title}  description={CORE_CONCEPTS[0].description} />
+              <CoreConcept {...CORE_CONCEPTS[1]} />
+              <CoreConcept {...CORE_CONCEPTS[2]} />
+              <CoreConcept {...CORE_CONCEPTS[3]} />
+
+              
             </ul>
 
           </section>

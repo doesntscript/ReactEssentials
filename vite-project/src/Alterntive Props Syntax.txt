@@ -1,0 +1,44 @@
+Alternativa Props Syntaxes 
+
+
+<CoreConcept img={CORE_CONCEPTS[0].image} title={CORE_CONCEPTS[0].title}  description={CORE_CONCEPTS[0].description} />
+
+<CoreConcept {...CORE_CONCEPTS[1]} />
+              
+<CoreConcept img={CORE_CONCEPTS[2].image} title={CORE_CONCEPTS[2].title}  description={CORE_CONCEPTS[2].description} />
+
+<CoreConcept img={CORE_CONCEPTS[3].image} title={CORE_CONCEPTS[3].title}  description={CORE_CONCEPTS[3].description} />
+
+<CoreConcept {...CORE_CONCEPTS[1]} />
+<CoreConcept {...CORE_CONCEPTS[2]} />
+<CoreConcept {...CORE_CONCEPTS[3]} />
+
+Alternativa mas rapida e curta para utilizar quando tive elementos iguais
+
+Pode-se também utilizar a desestruturação de objetos 
+
+function CoreConcept({image, title , description}) {
+  return (
+    <>
+    <li>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+    </>
+  )
+}
+
+ao invés de utilizar props.#### como exemplo
+
+// function CoreConcept(props) {
+//   return (
+//     <>
+//     <li>
+//       <img src={props.image} alt={props.title} />
+//       <h3>{props.title}</h3>
+//       <p>{props.description}</p>
+//     </li>
+//     </>
+//   )
+// }
