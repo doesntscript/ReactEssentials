@@ -1,0 +1,23 @@
+Components Reusable with Props
+
+function CoreConcept(props) {
+  return (
+    <>
+    <li>
+      <img src={props.img} alt={props.title} />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+    </>
+  )
+}
+
+<section id='core-concepts'>
+            <h2>Core Concepts</h2>
+            <ul>
+              <CoreConcept img={componentsImg} title="Components" description="The core UI building block."  />
+              <CoreConcept img={configImg} title="Props" description="" />
+              <CoreConcept img={jsxImg} title="" description="" />
+              <CoreConcept img={stateImg} title="" description="" />
+            </ul>
+</section>
