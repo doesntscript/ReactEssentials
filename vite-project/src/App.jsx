@@ -12,8 +12,10 @@ import stateImg from './assets/state-mgmt.png';
 
 
 import { CORE_CONCEPTS } from './data.js';
-import Header from './components/Header.jsx';
+
 import CoreConcept from './components/CoreConcept.jsx';
+import Header from './components/Header/Header.jsx';
+import TabButton from './components/TabButton.jsx';
 
 
 // function CoreConcept(props) {
@@ -45,7 +47,12 @@ function App() {
             </ul>
 
           </section>
-          <h2>Time to get started!</h2>
+          <section id='examples'>
+            <h2>Exemples</h2>
+            <menu>
+              <TabButton>Components</TabButton>
+            </menu>
+          </section>
         </main>
       </div>
     );
