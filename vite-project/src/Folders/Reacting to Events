@@ -1,0 +1,18 @@
+// Listening to Events and Executing Code When an Event Occurs.
+
+// import React from 'react'
+
+// const TabButton = ({children}) => {
+//   function handleClick() {
+//     console.log('Hello EveryBody!')
+//   }
+
+
+//   return (
+//     <>
+//     <li><button onClick={handleClick} > {children} </button></li>
+//     </>
+//   )
+// }
+
+// export default TabButton; 

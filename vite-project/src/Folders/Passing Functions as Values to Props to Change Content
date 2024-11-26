@@ -1,0 +1,18 @@
+// Passando Funções como Valores para Props para alterar o contéudo
+
+// function handleSelect() {
+//     console.log('Hello EveryBody - selected')
+//   }
+
+// const TabButton = ({children , onSelect}) => {
+  
+//     return (
+//       <>
+//       <li><button onClick={onSelect} > {children} </button></li>
+//       </>
+//     )
+//   }
+  
+//   export default TabButton; 
+
+// <TabButton onSelect={handleSelect} >Components</TabButton>
