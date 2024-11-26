@@ -1,0 +1,57 @@
+Composição de Componentes: A prop especial "children" 
+
+<section id='examples'>
+    <h2>Exemples</h2>
+    <menu>
+      <TabButton>Components</TabButton> Para acessar esse componente personalizado e necessario... 
+   </menu>
+</section>
+
+<section id='examples'>
+            <h2>Exemples</h2>
+            <menu>
+              <TabButton label="Components"/>
+              {/* <TabButton>Components</TabButton> */}
+            </menu>
+</section>
+       
+
+// import React from 'react'
+
+// const TabButton = (props) => {
+//   return (
+//     <>
+//     <li><button> {props.children} </button></li>
+//     </>
+//   )
+// }
+
+// export default TabButton;
+
+
+===> Using with Object Destructuring <===
+
+// import React from 'react'
+
+// const TabButton = ({children}) => {
+//   return (
+//     <>
+//     <li><button> {children} </button></li>
+//     </>
+//   )
+// }
+
+// export default TabButton; 
+
+
+===> Atribute Props using variable label <===
+
+const TabButton = ({ label }) => {
+  return (
+    <>
+    <li><button> {label} </button></li>
+    </>
+  )
+}
+
+export default TabButton; 
