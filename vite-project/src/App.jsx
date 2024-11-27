@@ -46,6 +46,24 @@ function App() {
   }
 
 
+  {/*  Rendering Content Conditionally  - Renderizando Conteúdo Condicionalmente */}
+  const tabContent = <p> Please select a topic. </p> ;
+
+  if(selectedTopic) {
+    tabContent = (
+      <div id='tab-content'>
+      <h3>{EXAMPLES[selectedTopic].title}</h3>
+      <p>{EXAMPLES[selectedTopic].description}</p>
+      <pre>
+        <code>
+        {EXAMPLES[selectedTopic].code}
+        </code>
+      </pre>
+    </div>
+    );
+  }
+
+
 
     return (
       <div>
@@ -82,17 +100,8 @@ function App() {
               </pre>
             </div> */}
 
-            {/*  Rendering Content Conditionally  - Renderizando Conteúdo Condicionalmente */}
-            <p> Please select a topic. </p>
-            <div id='tab-content'>
-              <h3>{EXAMPLES[selectedTopic].title}</h3>
-              <p>{EXAMPLES[selectedTopic].description}</p>
-              <pre>
-                <code>
-                {EXAMPLES[selectedTopic].code}
-                </code>
-              </pre>
-            </div>
+            {tabContent}
+            
           </section>
         </main>
       </div>
