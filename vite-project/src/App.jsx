@@ -11,11 +11,12 @@ import jsxImg from './assets/jsx-ui.png';
 import stateImg from './assets/state-mgmt.png';
 
 
-import { CORE_CONCEPTS } from './data.js';
+import { CORE_CONCEPTS, EXAMPLES } from './data.js';
 
 import CoreConcept from './components/CoreConcept.jsx';
 import Header from './components/Header/Header.jsx';
 import TabButton from './components/TabButton.jsx';
+import { useState } from 'react';
 
 
 // function CoreConcept(props) {
@@ -33,12 +34,17 @@ import TabButton from './components/TabButton.jsx';
 
 function App() {
 
-  let tabContent = "Please click a button";
+  // const [ selectedTopic, setSelectedTopic] = useState('components');
+  const [ selectedTopic, setSelectedTopic] = useState();
+  // let tabContent = "Please click a button";
 
   function handleSelect(selectedButton) {
     // selectedButton => 'components', 'jsx' 'props', 'state'
-     tabContent = selectedButton;
+    //  tabContent = selectedButton;
+    setSelectedTopic(selectedButton);
+    // console.log(selectedTopic);
   }
+
 
 
     return (
@@ -65,7 +71,28 @@ function App() {
               <TabButton  onSelect={ () => handleSelect('props')}>Pros</TabButton>
               <TabButton  onSelect={ () => handleSelect('state')}>State</TabButton>
             </menu>
-            {tabContent}
+
+            {/* <div id='tab-content'>
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>
+                {EXAMPLES[selectedTopic].code}
+                </code>
+              </pre>
+            </div> */}
+
+            {/*  Rendering Content Conditionally  - Renderizando Conteúdo Condicionalmente */}
+            <p> Please select a topic. </p>
+            <div id='tab-content'>
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>
+                {EXAMPLES[selectedTopic].code}
+                </code>
+              </pre>
+            </div>
           </section>
         </main>
       </div>
