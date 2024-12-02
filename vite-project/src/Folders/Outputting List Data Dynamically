@@ -1,0 +1,14 @@
+
+
+          
+<CoreConcept img={CORE_CONCEPTS[2].image} title={CORE_CONCEPTS[2].title}  description={CORE_CONCEPTS[2].description} />
+
+<CoreConcept {...CORE_CONCEPTS[1]} />
+<CoreConcept {...CORE_CONCEPTS[2]} />
+<CoreConcept {...CORE_CONCEPTS[3]} />
+
+Se eu remover um dos elementos na lista de data.js esse elemento ficaria quebrado por que estou gerando quatro elementos
+
+Matriz de dados renderizáveis
+
+{CORE_CONCEPTS.map((conceptItem) => <CoreConcept key {...conceptItem} /> )}
