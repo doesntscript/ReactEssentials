@@ -47,7 +47,7 @@ function App() {
 
 
   {/*  Rendering Content Conditionally  - Renderizando Conteúdo Condicionalmente */}
-  const tabContent = <p> Please select a topic. </p> ;
+  let tabContent = <p> Please select a topic. </p> ;
 
   if(selectedTopic) {
     tabContent = (
@@ -84,10 +84,10 @@ function App() {
             <h2>Exemples</h2>
             <menu>
               {/* <TabButton label="Components"/> */}
-              <TabButton  onSelect={ () => handleSelect('components')} >Components</TabButton>
-              <TabButton  onSelect={ () => handleSelect('jsx')}>JSX</TabButton>
-              <TabButton  onSelect={ () => handleSelect('props')}>Pros</TabButton>
-              <TabButton  onSelect={ () => handleSelect('state')}>State</TabButton>
+              <TabButton isSelected={selectedTopic === 'components'} onSelect={ () => handleSelect('components')} >Components</TabButton>
+              <TabButton isSelected={selectedTopic === 'jsx'} onSelect={ () => handleSelect('jsx')}>JSX</TabButton>
+              <TabButton isSelected={selectedTopic === 'props'} onSelect={ () => handleSelect('props')}>Pros</TabButton>
+              <TabButton isSelected={selectedTopic === 'state'} onSelect={ () => handleSelect('state')}>State</TabButton>
             </menu>
 
             {/* <div id='tab-content'>
